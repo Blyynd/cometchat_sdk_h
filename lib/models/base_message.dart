@@ -37,6 +37,8 @@ class BaseMessage extends AppEntity {
   bool? hasMentionedMe = false;
   List<ReactionCount> reactions;
   int unreadRepliesCount;
+  bool? isLastMessageRead;
+  bool? isLastMessageSent;
 
   /// Constructs a new `BaseMessage` instance.
   ///
@@ -68,7 +70,9 @@ class BaseMessage extends AppEntity {
       this.unreadRepliesCount = 0,
       this.mentionedUsers = const [],
       this.reactions = const [],
-      this.hasMentionedMe});
+      this.hasMentionedMe,
+      this.isLastMessageRead,
+      this.isLastMessageSent});
 
   /// Creates a new `BaseMessage` instance from a map.
   factory BaseMessage.fromMap(dynamic map) {
