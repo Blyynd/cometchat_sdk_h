@@ -35,6 +35,9 @@ class Conversation {
   ///[lastReadMessageId] is the ID of the last read message in the conversation.
   String? lastReadMessageId;
 
+  ///[isTyping] is the current typing state in the conversation.
+  bool isTyping;
+
   /// Constructs a new `Conversation` instance.
   ///
   /// Requires a [conversationType] and [conversationWith] to be specified.
@@ -49,6 +52,7 @@ class Conversation {
     this.tags,
     this.unreadMentionsCount = 0,
     this.lastReadMessageId,
+    this.isTyping = false,
   });
 
   /// Creates a new `Conversation` instance from a map.
@@ -77,12 +81,13 @@ class Conversation {
       ),
       unreadMentionsCount: map['unreadMentionsCount'],
       lastReadMessageId: map['lastReadMessageId'],
+      isTyping: map['isTyping] ?? false,
     );
   }
 
   /// Generates a string representation of the `Conversation`.
   @override
   String toString() {
-    return 'Conversation{conversationId: $conversationId, conversationType: $conversationType, conversationWith: $conversationWith, lastMessage: $lastMessage, updatedAt: $updatedAt, unreadMessageCount: $unreadMessageCount, tags: $tags, unreadMentionsCount: $unreadMentionsCount, lastReadMessageId: $lastReadMessageId}';
+    return 'Conversation{conversationId: $conversationId, conversationType: $conversationType, conversationWith: $conversationWith, lastMessage: $lastMessage, updatedAt: $updatedAt, unreadMessageCount: $unreadMessageCount, tags: $tags, unreadMentionsCount: $unreadMentionsCount, lastReadMessageId: $lastReadMessageId, isTyping: $isTyping}';
   }
 }
