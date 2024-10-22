@@ -81,7 +81,7 @@ class Conversation {
       ),
       unreadMentionsCount: map['unreadMentionsCount'],
       lastReadMessageId: map['lastReadMessageId'],
-      isTyping: map['isTyping] ?? false,
+      isTyping: map['isTyping'] ?? false,
     );
   }
 
