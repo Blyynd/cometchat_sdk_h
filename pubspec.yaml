@@ -1,6 +1,6 @@
 name: cometchat_sdk
 description: CometChat enables you to add voice, video & text chat for your website & app. This guide demonstrates how to add chat to an Flutter application using CometChat.
-version: 4.0.18
+version: 4.0.19
 homepage: https://www.cometchat.com/
 
 environment:
